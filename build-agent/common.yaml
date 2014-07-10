@@ -1,0 +1,22 @@
+# RVM
+# cruby binaries must exist in https://rvm.io/binaries/centos/6/x86_64/
+rvm::system_rubies:
+  'ruby-1.9.3-p547': {}
+  'ruby-2.0.0-p481':
+    default_use: true
+  'ruby-2.1.2': {}
+  'jruby-1.7.13': {}
+
+# Rubygems
+maestro_nodes::rubygems::api_key: xxxxx
+maestro_nodes::rubygems::geminabox_repo: 'https://xxx:yyy@gems.acme.com'
+
+# Puppet forge
+maestro_nodes::puppetforge::username: john
+maestro_nodes::puppetforge::password: doe
+
+# Jenkins slave
+#jenkins::slave::masterurl: 'http://jenkins:8080'
+#jenkins::slave::ui_user: 'jenkins'
+#jenkins::slave::ui_pass: 'jenkins'
+jenkins::slave::install_java: false
