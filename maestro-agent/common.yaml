@@ -1,0 +1,11 @@
+# MaestroDev credentials
+maestro::params::repo:
+  url: 'https://repo.maestrodev.com/archiva/repository/all'
+  username: 'username'
+  password: 'password'
+
+maestro::yumrepo::username: 'username'
+maestro::yumrepo::password: 'password'
+
+rvm::system_rubies:
+  'jruby-1.7.4': {}

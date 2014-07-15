@@ -38,10 +38,23 @@ If you are deploying to rubygems.org you can set RUBYGEMS_API_KEY, or if deployi
 Setting PUPPETFORGE_USERNAME and PUPPETFORGE_PASSWORD will configure Puppet Blacksmith to deploy to the Puppet Forge.
 
 
+## Maestro agent `maestrodev/agent`
+
+An extension to the build agent that includes the Maestro Agent service for Maestro users.
+
+
 # Building
 
 See `site.pp` and `common.yaml` for the Puppet configuration in each dir.
 
+## build-agent
+
     gem install librarian-puppet # tested with 1.1.2
     librarian-puppet install
-    docker build .
+    docker build -t maestrodev/build-agent .
+
+## maestro-agent
+
+Edit credentials in common.yaml and build
+
+    docker build -t maestrodev/maestro-agent .
