@@ -1,0 +1,52 @@
+{
+  "name": "maestrodev-ant",
+  "version": "1.0.5",
+  "source": "http://github.com/maestrodev/puppet-ant.git",
+  "author": "maestrodev",
+  "license": "Apache License, Version 2.0",
+  "summary": "Apache ant module for Puppet",
+  "description": "Puppet module for installing Ant and/or Ivy from the Apache Software Foundation.",
+  "project_page": "http://github.com/maestrodev/puppet-ant",
+  "dependencies": [
+    {
+      "name": "maestrodev/wget",
+      "version_requirement": ">= 1.0.0"
+    },
+    {
+      "name": "puppetlabs/stdlib",
+      "version_requirement": ">= 3.2.0"
+    }
+  ],
+  "types": [
+
+  ],
+  "checksums": {
+    "Gemfile": "94ffdd17320ca8f33b9cf04a6efa0faa",
+    "Gemfile.lock": "ef4587e98210665fd440bf0945141fa1",
+    "Modulefile": "4eb78cb6826cd4baad143a4476854243",
+    "Puppetfile": "79ce7e4d929eea4ed1751041b3ae9211",
+    "Puppetfile.lock": "fcb1d174a126a528f22c08bdcb873c8a",
+    "README.md": "ee4e40c37eeb748bb08bd1fa5c868b12",
+    "Rakefile": "019215bbe61452f25a0e3760630f238f",
+    "manifests/init.pp": "2584a265c8b50f7dd1c49d212596f134",
+    "manifests/ivy.pp": "d773949d487b85783e365f415b480f69",
+    "manifests/lib.pp": "9a95a78e30369be50c87b7fdb8d8e984",
+    "manifests/params.pp": "41f5caf507f32108827f0b46bb5b6b4a",
+    "manifests/tasks/maven.pp": "8c666b6b0d6da24bb4d45776945d3852",
+    "manifests/tasks/sonar.pp": "e28ead54a6458e8faa456e9ed5f9fed9",
+    "modules/wget/Gemfile": "4867df718b033e152c59c2a418e88b92",
+    "modules/wget/Gemfile.lock": "b3e4cf700f055d8d242ad877da298127",
+    "modules/wget/Modulefile": "319654cea17d4ad7af5a45f4746f6678",
+    "modules/wget/README.md": "53e3a8bdf9ad988aae9b9581831bbcd6",
+    "modules/wget/Rakefile": "527f8893f2694a9bc92993074f011cc3",
+    "modules/wget/manifests/init.pp": "7a1575c5a0a755b01dcdd2dbf4f8e956",
+    "modules/wget/spec/classes/init_spec.rb": "337ce66ffc43c7478ff0d3ff166d278a",
+    "modules/wget/spec/fixtures/manifests/site.pp": "627dec82fd1b0d0b4f9e47135ed3e1b7",
+    "modules/wget/spec/spec_helper.rb": "0db89c9a486df193c0e40095422e19dc",
+    "spec/classes/init_spec.rb": "75437073e8c16b97c44966c751d602e7",
+    "spec/classes/ivy_spec.rb": "78d65f53c062cf2ef849aedc4817ce81",
+    "spec/classes/tasks/maven_spec.rb": "4aecf6c4123fb8e8e063e2226bde35c9",
+    "spec/classes/tasks/sonar_spec.rb": "98ce71912e7d0fbd43a9e9b233d54b22",
+    "spec/spec_helper.rb": "0db89c9a486df193c0e40095422e19dc"
+  }
+}

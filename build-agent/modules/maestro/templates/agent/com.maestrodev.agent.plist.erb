@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.maestrodev.agent</string>
+    <key>ProgramArguments</key>
+    <array>
+        <string><%= @basedir %>/bin/maestro_agent</string>
+    </array>
+    <key>inetdCompatibility</key>
+    <dict>
+      <key>Wait</key>
+      <false/>
+    </dict>
+    <key>KeepAlive</key>
+    <true/>
+    <key>Disabled</key>
+    <false/>
+    <key>LaunchOnStart</key>
+    <true/>
+</dict>
+</plist>

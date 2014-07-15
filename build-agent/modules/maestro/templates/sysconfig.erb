@@ -1,0 +1,15 @@
+export MAESTRO_ENV=production
+RUN_AS_USER=<%= @user %>
+
+# variables need to be exported to be used in wrapper.conf or app
+# Other vars just used in init.d script don't need to
+
+export JAVA_HOME=/usr/lib/jvm/java
+export MAESTRO_BASE=<%= @basedir %>
+export HOME=<%= @user_home %>
+# export MAESTRO_CONFIG=$MAESTRO_BASE/conf/maestro.json
+# export MAESTRO_LOG=$MAESTRO_BASE/logs/maestro.log
+
+PIDDIR=$MAESTRO_BASE/logs
+WRAPPER_CONF=$MAESTRO_BASE/conf/wrapper.conf
+WRAPPER_CMD=<%= @homedir %>/bin/wrapper

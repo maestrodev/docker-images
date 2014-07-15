@@ -1,0 +1,40 @@
+#!/bin/bash
+
+if [ "$#" -lt 2 ]; then
+  echo "Usage: $(basename $0) /path/to/stats.js /path/to/configfile path/to/logfile" >&2
+  exit 1
+fi
+
+STATSJS=$1
+CONFIGFILE=$2
+LOGFILE=$3
+
+
+NODE=$(which nodejs || which node)
+
+if ! [ -x "$NODE" ]; then
+  echo "Unable to run node  '${NODE}' cannot be executed" >&2
+  exit 255
+fi
+
+if ! [ -r "$STATSJS" ]; then
+  echo "Unable to read '$STATSJS' - file is either missing or unreadable"
+  exit 255
+fi
+
+if ! [ -r "$CONFIGFILE" ]; then
+  echo "Unable to read '$CONFIGFILE' - file is either missing or unreadable"
+  exit 255
+fi
+
+exec 3>&2
+if [ -n "$LOGFILE" ]; then
+  exec 1>>$LOGFILE
+  exec 2>>$LOGFILE
+fi
+
+echo "Running $NODE $STATSJS $CONFIGFILE"
+exec $NODE $STATSJS $CONFIGFILE
+
+echo "Unable to execute ${NODE} ${STATSJS} ${CONFIGFILE}!" >&3
+exit 1

@@ -1,0 +1,35 @@
+{
+  "name": "maestrodev-svn",
+  "version": "1.1.0",
+  "source": "http://github.com/maestrodev/puppet-svn",
+  "author": "maestrodev",
+  "license": "Apache License, Version 2.0",
+  "summary": "Puppet module for configuring a Subversion client",
+  "description": "Install and configure Subversion client",
+  "project_page": "http://github.com/maestrodev/puppet-svn",
+  "dependencies": [
+
+  ],
+  "types": [
+
+  ],
+  "checksums": {
+    "Gemfile": "b75498a23455ce760b567a60235d780a",
+    "Gemfile.lock": "5161d79fcfd7867dafb840e8a3bc87d0",
+    "Modulefile": "8ea662544a05a761cdc35756176394b4",
+    "README.md": "612adb5b6260b7c568e04dc6f4842e12",
+    "Rakefile": "81bfd48841df50034edc8158e68f81e0",
+    "files/servers": "cfaac4a3b282b95eb296b4076454e420",
+    "manifests/config/credentials.pp": "321e649846e95002905e6f400a3314cb",
+    "manifests/config/servers.pp": "221bff93616bb86025ca84894f687845",
+    "manifests/config/sslcert.pp": "511043af0ebf907aa80a7f97edf4262f",
+    "manifests/config.pp": "012fb214ba714aa660890bc40f0939e6",
+    "manifests/init.pp": "ce15b4023dc96f24147accdbbd8ffea0",
+    "spec/classes/config_spec.rb": "2fdd0144fa86f8da0fbd8912e803c9b2",
+    "spec/classes/init_spec.rb": "78f3673ded5fe0c41208eb39df7e9396",
+    "spec/defines/config/credentials_spec.rb": "cfbccf15343b22112a3165261a2170b7",
+    "spec/spec_helper.rb": "0db89c9a486df193c0e40095422e19dc",
+    "templates/simpleauth.erb": "6e123f5fe00d3cc3dbc0fffdd67b1eff",
+    "templates/sslserver.erb": "beb075fd1b9872e91866c4e238742d51"
+  }
+}

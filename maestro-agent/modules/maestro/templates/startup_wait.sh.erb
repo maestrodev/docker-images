@@ -1,0 +1,38 @@
+#!/bin/bash
+
+#while [ `PGPASSWORD=$1 psql -h localhost --username=sonar sonar -c "select tablename from pg_tables where tablename = 'users';" | grep -c users` -eq 0 ]
+#  do
+#    echo "Waiting for Sonar table to be created: users"
+#    sleep 10
+#  done
+
+<% 
+  using_ldap = !@ldap.empty?
+  url = @jdbc_users['url']
+  host = url.gsub(%r{jdbc:postgresql://([^:/]+)(:[0-9]+)?/(.*)}, '\1')
+-%>
+
+<%
+tables = ["role"]
+tables += ["userassignment", "JDOUSER"] unless using_ldap
+-%>
+
+# quote and join table names
+for table in <%= tables.map {|t| "\"#{t}\""}.join(" ") %>
+  do
+    while [ `PGPASSWORD=$1 psql -h <%= host %> --username=maestro maestro -c "select tablename from pg_tables where tablename = '$table';" | grep -c "$table"` -eq 0 ]
+      do
+        echo "`date`: Waiting for Maestro table to be created: $table"
+        sleep 10
+      done
+  done
+
+# wait until seed data has been inserted
+for table in <%= tables.map {|t| "\"#{t}\""}.join(" ") %>
+  do
+    while [ `PGPASSWORD=$1 psql -h <%= host %> --username=maestro maestro -c "select count(*) from \"$table\";" | tail -n 3 | head -n 1` -eq 0 ]
+      do
+        echo "`date`: Waiting for Maestro seed data to be inserted: $table"
+        sleep 10
+      done
+  done

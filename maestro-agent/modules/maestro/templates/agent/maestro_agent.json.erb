@@ -1,0 +1,33 @@
+{
+"agent": {
+  "log": {
+    "email": {
+      "level": "ERROR",
+      "server": "localhost",
+      "port": 25,
+      "domain": "maestrodev.com",
+      "from": "<%= @support_email %>",
+      "to": "<%= @support_email %>",
+      "authtype": "plain"
+    },
+    "level": "<%= @logging_level || "INFO" %>"
+  },
+  "name": "<%= @agent_name %>",
+  "stomp": {
+<% if has_variable?("stomp_host") and @stomp_host != "" -%>
+    "host": "<%= @stomp_host %>",
+<% else -%>
+    "host": "<%= @fqdn.gsub(/\.agent\w*/,'') %>",
+<% end -%>
+    "port": 61613,
+    "user": "<%= @stomp_username %>",
+    "passcode": "<%= @stomp_password %>",
+    "reliable": true
+    },
+<% if has_variable?("facter") and @facter == true -%>
+    "facter": true
+<% else -%>
+    "facter": false
+<% end -%>
+  }
+}

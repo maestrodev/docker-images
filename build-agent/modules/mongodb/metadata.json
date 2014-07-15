@@ -1,0 +1,55 @@
+{
+  "name": "puppetlabs-mongodb",
+  "version": "0.3.0",
+  "summary": "mongodb puppet module",
+  "author": "puppetlabs",
+  "description": "10gen mongodb puppet module",
+  "dependencies": [
+    {
+      "name": "puppetlabs/apt",
+      "version_requirement": "\u003e\u003d 1.0.0"
+    },
+    {
+      "name": "puppetlabs/stdlib",
+      "version_requirement": "\u003e\u003d 2.2.0"
+    }
+  ],
+  "types": [],
+  "checksums": {
+    ".bundle/config": "7f1c988748783d2a8d455376eed1470c",
+    ".fixtures.yml": "d9586415bbdade904c869b5dcd83045c",
+    ".forge-release/pom.xml": "c650a84961ad88de03192e23b63b3549",
+    ".forge-release/publish": "1c1d6dd64ef52246db485eb5459aa941",
+    ".forge-release/settings.xml": "06d768a57d582fe1ee078b563427e750",
+    ".forge-release/validate": "7fffde8112f42a1ec986d49ba80ac219",
+    ".nodeset.yml": "f2b857f9fc7a701ff118e28591c12925",
+    ".travis.yml": "22845b857b93cd5fdae7c02424d597b3",
+    "CHANGELOG": "5f66955b867f38eabe036af074810f40",
+    "Gemfile": "9ed4e2f4cfc1722bf8983483cb7e40d3",
+    "Gemfile.lock": "ba62e49ff703083ec8b37f4749d82779",
+    "LICENSE": "b3f8a01d8699078d82e8c3c992307517",
+    "Modulefile": "f4ad0e1bd5c55a970a8dce0c0e09a241",
+    "README.md": "0ba7024cbc1638a10a5785289cf9ea49",
+    "Rakefile": "0428ea3759a4692c91604396c406a9c1",
+    "manifests/init.pp": "44760cd09c5562cc7fc7467167baa902",
+    "manifests/params.pp": "0d47060165f5d420cc6b7d76c1790a31",
+    "manifests/sources/apt.pp": "43f39c1438902fd1735a9f1e81eb91e9",
+    "manifests/sources/yum.pp": "fb6a3cc7a1fce17dbfe77ef0194e51eb",
+    "spec/classes/mongodb_spec.rb": "25c3811ff1902bc574eee33c25b8c835",
+    "spec/spec_helper.rb": "0db89c9a486df193c0e40095422e19dc",
+    "spec/spec_helper_system.rb": "0e2c886ed3570f4491401a0ceccdf762",
+    "spec/system/basic_spec.rb": "0a5b33d18254bedcb7886e34846ebff6",
+    "spec/system/class_spec.rb": "51067d0f2d11f558c989dbdd0877995d",
+    "spec/system/mongodb_config_spec.rb": "1861e7776a52cf23ff5e18626b626719",
+    "spec/system/mongodb_install_spec.rb": "3a0150191841113f378edaac859d3cf1",
+    "spec/system/mongodb_service_spec.rb": "99d134f08e419f79f60b30e3ae36f1fd",
+    "templates/mongodb.conf.erb": "3b65c197cb1d82ea0d7f10fef9b84571",
+    "tests/init.pp": "9a09da130383dc0c05eded5ef0744876",
+    "tests/init_10gen.pp": "43c93fb5853d064da27860f453ad55ef",
+    "tests/sources/apt.pp": "bcd51d9fcb2cef9af29f0acc08e36c85",
+    "tests/sources/yum.pp": "1daacf2de2c2d718345010fc5ce73245"
+  },
+  "source": "git@github.com:puppetlabs/puppetlabs-mongodb.git",
+  "project_page": "https://github.com/puppetlabs/puppetlabs-mongodb",
+  "license": "Apache License Version 2.0"
+}

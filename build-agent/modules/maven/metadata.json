@@ -1,0 +1,14 @@
+{
+  "name": "maestrodev-maven",
+  "version": "1.2.1",
+  "author": "maestrodev",
+  "summary": "Apache Maven module for Puppet",
+  "license": "Apache License, Version 2.0",
+  "source": "http://github.com/maestrodev/puppet-maven",
+  "project_page": "http://github.com/maestrodev/puppet-maven",
+  "issues_url": "https://github.com/maestrodev/puppet-maven/issues",
+  "description": "A Puppet module to download artifacts from Maven repositories",
+  "dependencies": [
+    {"name":"maestrodev/wget","version_requirement":">=1.0.0"}
+  ]
+}

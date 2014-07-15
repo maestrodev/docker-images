@@ -1,0 +1,16 @@
+# This configuration file is loaded on startup and is available throughout
+# the application code and JSPs as a bean.
+
+# Google Analytics configuration
+client.google.analytics.propertyId = <%= @ga_property_id %>
+
+# Metrics configuration
+metrics.statsd.hostname = localhost
+metrics.statsd.port = 8125
+metrics.mongodb.hostname = localhost
+metrics.mongodb.port = 27017
+
+<% @web_config_properties.each do |key, value| -%>
+<%= key %> = <%= value %>
+<%- end unless @web_config_properties.nil? %>
+

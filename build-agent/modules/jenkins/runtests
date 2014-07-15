@@ -1,0 +1,1 @@
+runtests='bundle exec rake syntax lint spec_standalone && (cd ~/source/github/instant-jenkins && bundle exec librarian-puppet install && bundle exec vagrant provision)'

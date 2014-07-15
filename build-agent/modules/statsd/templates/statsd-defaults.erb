@@ -1,0 +1,7 @@
+# HEADER: This file is being managed by Puppet. Any manual changes to this file
+# will be overwritten.
+
+STATSJS="<%= @statsjs %>"
+STATSD_CONFIG="<%= @configfile %>"
+STATSD_LOGFILE="<%= @logfile %>"
+DAEMON_ARGS="$STATSJS $STATSD_CONFIG $STATSD_LOGFILE"

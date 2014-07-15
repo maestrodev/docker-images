@@ -1,0 +1,35 @@
+{
+  "is_demo": <%= @is_demo %>,
+  "lucee": {
+    "metrics": {
+      "enabled" : <%= @metrics_enabled %>
+    },
+    "log" : {
+      "level": "<%= @logging_level || "INFO" %>"
+    },
+    "eui": {
+      "display": true
+    },
+    "agent_auto_activate": <%= @agent_auto_activate %>,
+    "agent_timeout": 300,
+    "username": "<%= @lucee_username %>",
+    "password": "<%= @lucee_password %>",
+    "database": {
+      "server": "<%= @type || "postgres" %>",
+      "host": "<%= @host || "localhost" %>",
+      "port": <%= @port || "5432" %>,
+      "user": "<%= @username || "maestro" %>",
+      "pass": "<%= @password || "maestro" %>",
+      "database_name": "<%= @database || "luceedb" %>"
+    },
+    "stomp": {
+      "host": "127.0.0.1",
+      "port": 61613,
+      "user": "<%= @stomp_username %>",
+      "passcode": "<%= @stomp_password %>",
+      "reliable": true,
+      "messenger_debugging": <%= @messenger_debugging || false %>
+    },
+    "internal_agent": false
+  }
+}

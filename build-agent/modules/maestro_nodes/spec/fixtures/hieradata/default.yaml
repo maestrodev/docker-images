@@ -1,0 +1,16 @@
+---
+maestro_nodes::agent::repo:
+  url: https://repo.maestrodev.com/archiva/repository/all
+  username: your_username
+  password: CHANGEME
+
+maestro::maestro::repo:
+  id: maestro-mirror
+  username: u
+  password: p
+  url: https://repo.maestrodev.com/archiva/repository/all
+
+jenkins::configure_firewall: false
+
+maestro_nodes::agent::maven::maven_properties:
+  sonar.jdbc.url: 'jdbc:postgres://localhost/sonar'

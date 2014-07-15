@@ -1,0 +1,172 @@
+{
+  "name": "maestrodev-maestro_nodes",
+  "version": "1.7.0",
+  "source": "http://github.com/maestrodev/puppet-maestro_nodes",
+  "author": "maestrodev",
+  "license": "Apache License, Version 2.0",
+  "summary": "Maestro related services",
+  "description": "Maestro related services installation and configuration: jenkins, sonar, archiva,...",
+  "project_page": "http://github.com/maestrodev/puppet-maestro_nodes",
+  "dependencies": [
+    {
+      "name": "puppetlabs/stdlib",
+      "version_requirement": ">=3.2.0"
+    },
+    {
+      "name": "maestrodev/ant",
+      "version_requirement": ">=1.0.5"
+    },
+    {
+      "name": "maestrodev/archiva",
+      "version_requirement": ">=1.0.0"
+    },
+    {
+      "name": "maestrodev/git",
+      "version_requirement": ">=1.0.0"
+    },
+    {
+      "name": "maestrodev/svn",
+      "version_requirement": ">=1.0.0"
+    },
+    {
+      "name": "rtyler/jenkins",
+      "version_requirement": ">=1.1.0"
+    },
+    {
+      "name": "maestrodev/maestro",
+      "version_requirement": ">=2.0.0"
+    },
+    {
+      "name": "maestrodev/maven",
+      "version_requirement": ">=0.0.2"
+    },
+    {
+      "name": "maestrodev/sonar",
+      "version_requirement": ">=1.0.0"
+    },
+    {
+      "name": "maestrodev/rvm",
+      "version_requirement": ">=1.4.0"
+    },
+    {
+      "name": "maestrodev/ssh_keygen",
+      "version_requirement": ">=1.0.0"
+    },
+    {
+      "name": "puppetlabs/mongodb",
+      "version_requirement": "0.3.0"
+    },
+    {
+      "name": "maestrodev/activemq",
+      "version_requirement": ">=2.0.0"
+    },
+    {
+      "name": "puppetlabs/java",
+      "version_requirement": ">=0.3.0"
+    },
+    {
+      "name": "puppetlabs/ntp",
+      "version_requirement": ">=3.0.0"
+    },
+    {
+      "name": "stahnma/epel",
+      "version_requirement": ">=0.0.6"
+    },
+    {
+      "name": "maestrodev/statsd",
+      "version_requirement": ">=1.0.0"
+    },
+    {
+      "name": "puppetlabs/nodejs",
+      "version_requirement": ">=0.3.0"
+    },
+    {
+      "name": "jfryman/nginx",
+      "version_requirement": ">= 0.0.7"
+    },
+    {
+      "name": "saz/ssh",
+      "version_requirement": ">=1.2.0"
+    }
+  ],
+  "types": [
+
+  ],
+  "checksums": {
+    "Gemfile": "f58d1895a8c93ae4e25ebfdd02ffb51f",
+    "Gemfile.lock": "24b38c3f7ad68af4ab21580f983bc8ec",
+    "Modulefile": "2dd6673d26c16b89d9e9373d7d10c0e4",
+    "Puppetfile": "7c7f6979c1b9dfb67613adf53f370b23",
+    "Puppetfile.lock": "86e80d797ac662aa6d8c12c0b521ad89",
+    "README.md": "7b5c9809804bbd7fb2f931452a88dc14",
+    "Rakefile": "0aa6b09cd6c994710dda3f85964f0b14",
+    "Vagrantfile": "754427b8bc0c58e2bbbdff5a5f2bf515",
+    "files/nginx/default.conf": "023ff7becf8536898fbbc47672a6b40a",
+    "files/puppet-enterprise-installer-answers.txt": "6886e222f1ce54c82ece1dbbd6596565",
+    "manifests/agent/ant.pp": "cc1ed51f019a0ede7212c89c8c7c1733",
+    "manifests/agent/git.pp": "5a7d9c102a30b48a13c3c9dd40dceae3",
+    "manifests/agent/jenkins.pp": "ab4c84f2f1f09fa1bafb99755399df4f",
+    "manifests/agent/maven.pp": "bc32e57e87e15b23a29abce078d302f5",
+    "manifests/agent/rvm.pp": "8a193805ed5bca4465fdd74f94b38a06",
+    "manifests/agent.pp": "77d98eb8ee613c2b454f2c84e495e3d2",
+    "manifests/agentrvm.pp": "34b9231b3a9ae0df3d75aee2dc62a314",
+    "manifests/androidsdk.pp": "6a1203d3c996f3b14ea1a452b98374d8",
+    "manifests/archivaserver.pp": "8205f401e1d3f06143f68987eb4cf8a1",
+    "manifests/database.pp": "b8d8ade12829cb24478b2858d8a8056c",
+    "manifests/firewall/maestro.pp": "b149b372338631cd3fc3617a5ece09d9",
+    "manifests/firewall/post.pp": "494ff77a79c3a2ed4c1418bfddea4625",
+    "manifests/firewall/pre.pp": "ae3a0da96094ab8df53fef657b7c4d2e",
+    "manifests/firewall/puppetmaster.pp": "03b3c4b8a24e14f56659f0a1ae61e8f0",
+    "manifests/firewall.pp": "064caef0bf2c48dcfb53fcd3eab13e94",
+    "manifests/jenkinsserver.pp": "a6887ceb9f340b49bbb4891f01fe7060",
+    "manifests/macos_agent.pp": "e6d0977304ff1782b1a57b7646feda48",
+    "manifests/maestrofirewall.pp": "c0cb91a4534a663d6fe981c7ff7bcf1f",
+    "manifests/maestroserver.pp": "faaf7140725f46f660d0ef260ca474e8",
+    "manifests/mail.pp": "eaa57c98dd9e11e52add5fff1b1512ff",
+    "manifests/metrics_repo.pp": "e0fff71d2ee978546fae31e231bc64ac",
+    "manifests/nginx/archiva.pp": "b8b70a3c14f3ad7a6e3e4fef0e0bced0",
+    "manifests/nginx/archivaservernginx.pp": "253b9e73268acb2b283254d9990a9480",
+    "manifests/nginx/jenkins.pp": "b351e92ea25d318e463dd7f09a2368a2",
+    "manifests/nginx/jenkinsservernginx.pp": "4bb0a1787a41b69bfdf13602502724d2",
+    "manifests/nginx/maestroservernginx.pp": "ce6d8aa12b61b7d70ed00de2f0b5c9f5",
+    "manifests/nginx/params.pp": "336d117433b3444256bc1882a211cbb6",
+    "manifests/nginx/sonar.pp": "b9914860745f1bd45d370b2d8b0b17b3",
+    "manifests/nginxproxy.pp": "015bc2cb3913fff8b224785acb74d8c9",
+    "manifests/nodes/parent.pp": "be5af5cdfa99657bb40b67bba2538fba",
+    "manifests/parent.pp": "7991e4dadb68d46fb1c2709f2239810b",
+    "manifests/puppetenterprise.pp": "e2d66c34eb450e28315a4ebcc86deb5b",
+    "manifests/puppetforge.pp": "ea2c7d881146d74aeb83e1ba28751d06",
+    "manifests/repositories.pp": "35bcf8e439ef3d6e6e95583c93cb6d82",
+    "manifests/rubygems.pp": "37228b6220fd308b27ab9343156e10a2",
+    "manifests/sonarserver.pp": "c3e3aba38a6fa23db6d885db3b02041e",
+    "spec/classes/agent_spec.rb": "195b3c4e99e689686ea0d1ae8bb05a57",
+    "spec/classes/agentrvm_spec.rb": "fda71a08e38be0102e6998eabd8c78aa",
+    "spec/classes/archivaserver_spec.rb": "104d72400059c439831fa983cb3be0d6",
+    "spec/classes/jenkinsserver_spec.rb": "6f70c5302200779594947551f557a068",
+    "spec/classes/maestroserver_spec.rb": "d9fbc776b3b2882e4c6b014bcd36aae0",
+    "spec/classes/nginx/archiva_spec.rb": "a6dd557324e4dddbe9a77ce627bc53bd",
+    "spec/classes/nginx/archivaservernginx_spec.rb": "df1df724540ae772abf0e61d09041944",
+    "spec/classes/nginx/jenkins_spec.rb": "90258275754a53de90fab429948230e6",
+    "spec/classes/nginx/jenkinsservernginx_spec.rb": "de2867bf4d956dfdcc964d7a08e8a640",
+    "spec/classes/nginx/maestroservernginx_spec.rb": "025540730ac67aee00b064a3824f0c51",
+    "spec/classes/nginx/nginx_proxy_shared.rb": "709a8ae694bd7809f70b8aa3be517bb1",
+    "spec/classes/nginx/sonar_spec.rb": "7f04ed020c0c677567140601ddb0cb89",
+    "spec/classes/nginxproxy_spec.rb": "2a5d9324abaf6a4d9eadc5a175c7dc31",
+    "spec/classes/parent_spec.rb": "1c20ee45b8cf08d1e9b83d4cb7db344a",
+    "spec/classes/puppetenterprise_spec.rb": "dbbfbb5a2aebd60add1dbd5a8da46d4c",
+    "spec/classes/puppetforge_spec.rb": "b6dd4c77ea240f02e6ea416171d82ff1",
+    "spec/classes/rubygems_spec.rb": "c1de585c4622a1c06fe546453f5acbe2",
+    "spec/classes/sonarserver_spec.rb": "9cd011d5510866e2ca824d921baecbdd",
+    "spec/fixtures/hiera.yaml": "d1bf524b324b53ba691a0fb168e4cbf8",
+    "spec/fixtures/hieradata/default.yaml": "6e4f9e94ca2946cd8e08530598c1fdcc",
+    "spec/spec_helper.rb": "f2e94897b7fba8571df12bc6b5545688",
+    "spec/support/centos.rb": "614473f0536e1222768068ed18f2d36a",
+    "spec/support/redhat.rb": "58808de9c86b68b49bbe31382fe417b5",
+    "templates/androidsdk.properties.erb": "60e37685c4bce752ca32cfd9990c9b00",
+    "templates/ant.xml.erb": "e0b0b2953b10fb72fad14ec2442f8e0f",
+    "templates/archiva.xml.erb": "9365ee215f89c17647bac3a27f651749",
+    "templates/puppet_enterprise_installer.txt.erb": "a312c0d982b1b1c93ca8350ca869a7c9",
+    "templates/puppetforge.yml.erb": "62b579f640a0216628b7e41eba170806",
+    "tests/site.pp": "6c8806720b3832d3f350d88a9d31cd85"
+  }
+}

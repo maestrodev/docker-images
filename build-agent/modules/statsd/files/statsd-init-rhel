@@ -1,0 +1,88 @@
+#!/bin/bash
+#
+# StatsD
+#
+# chkconfig: 3 50 50
+# description: StatsD init.d
+. /etc/rc.d/init.d/functions
+ 
+DESC="statsd"
+NAME="statsd"
+DAEMON="/usr/local/sbin/statsd"
+pidfile=/var/run/statsd.pid
+lockfile=/var/lock/subsys/statsd
+RETVAL=0
+STOP_TIMEOUT=${STOP_TIMEOUT-10}
+
+# Read configuration variable file if it is present
+[ -r /etc/default/$NAME ] && . /etc/default/$NAME
+
+# Determine if we can use the -p option to daemon, killproc, and status.
+# RHEL < 5 can't.
+if status | grep -q -- '-p' 2>/dev/null; then
+    daemonopts="--pidfile $pidfile"
+    pidopts="-p $pidfile"
+fi
+ 
+start() {
+  echo -n $"Starting $NAME: "
+  # See if it's already running. Make sure we don't have a stale pid file.
+  if [ -f ${pidfile} ]; then
+    status -p ${pidfile} ${prog}
+    RETVAL=$?
+    if [ "1" == "$RETVAL" ]; then
+      echo "Removing stale file"
+      rm -f ${pidfile}
+    else
+      success "statsd already running"
+      return $RETVAL
+    fi
+  fi
+  # Run as process
+  $DAEMON ${STATSJS} ${STATSD_CONFIG} ${STATSD_LOGFILE} &
+  RETVAL=$?
+  # Store PID
+  echo $! > ${pidfile}
+
+  # Success
+  [ $RETVAL = 0 ] && success "statsd started"
+  echo
+  return $RETVAL
+}
+ 
+stop() {
+  echo -n $"Stopping $NAME: "
+  killproc -p ${pidfile}
+  RETVAL=$?
+  echo
+  [ $RETVAL = 0 ] && rm -f ${pidfile}
+}
+ 
+# See how we were called.
+case "$1" in
+  start)
+  start
+  ;;
+  stop)
+  stop
+  ;;
+  status)
+  status -p ${pidfile} ${prog}
+  RETVAL=$?
+  ;;
+  restart)
+  stop
+  start
+  ;;
+  condrestart)
+  if [ -f ${pidfile} ] ; then
+    stop
+    start
+  fi
+  ;;
+  *)
+  echo $"Usage: $prog {start|stop|restart|condrestart|status}"
+  exit 1
+esac
+ 
+exit $RETVAL

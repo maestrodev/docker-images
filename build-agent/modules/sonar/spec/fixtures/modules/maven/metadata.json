@@ -1,0 +1,145 @@
+{
+  "name": "maestrodev-maven",
+  "version": "1.1.9",
+  "source": "http://github.com/maestrodev/puppet-maven",
+  "author": "maestrodev",
+  "license": "Apache License, Version 2.0",
+  "summary": "Apache Maven module for Puppet",
+  "description": "A Puppet module to download artifacts from Maven repositories",
+  "project_page": "http://github.com/maestrodev/puppet-maven",
+  "dependencies": [
+    {
+      "name": "maestrodev/wget",
+      "version_requirement": ">=1.0.0"
+    }
+  ],
+  "types": [
+    {
+      "name": "maven",
+      "doc": "Maven repository files.",
+      "properties": [
+        {
+          "name": "ensure",
+          "doc": "May be one of two values: 'present' or 'latest'.  When 'present' (the default)\nthe specified maven artifact is downloaded when no file exists\nat 'path' (or 'name' if no path is specified.)  This is approporate\nwhen the specified maven artifact refers to a released (non-SNAPSHOT)\nartifact.  If 'latest' is specified and the value of version is\n'RELEASE', 'LATEST', or a SNAPSHOT the repository is queried for the\nmost recent version.\n\nValid values are `present`, `latest`. "
+        }
+      ],
+      "parameters": [
+        {
+          "name": "path",
+          "doc": "The destination path of the downloaded file.\n\n"
+        },
+        {
+          "name": "id",
+          "doc": "The Maven repository id, ie. 'org.apache.maven:maven-core:jar:3.0.5',\n'org.apache.maven:maven-core:jar:sources:3.0.5'\n\n"
+        },
+        {
+          "name": "groupid",
+          "doc": "The Maven arifact group id, ie. 'org.apache.maven'\n\n"
+        },
+        {
+          "name": "artifactid",
+          "doc": "The Maven artifact id, ie. 'maven-core'\n\n"
+        },
+        {
+          "name": "version",
+          "doc": "The Maven artifact version, ie. '3.0.5'\n\n"
+        },
+        {
+          "name": "packaging",
+          "doc": "The Maven artifact packaging, ie. 'jar'\n\n"
+        },
+        {
+          "name": "classifier",
+          "doc": "The Maven artifact classifier, ie. 'sources'\n\n"
+        },
+        {
+          "name": "repoid",
+          "doc": "Id of the repository to use. Useful for mirroring, authentication,...\n\n"
+        },
+        {
+          "name": "repos",
+          "doc": "Repositories to use for artifact downloading. Defaults to http://repo1.maven.apache.org/maven2\n\n"
+        },
+        {
+          "name": "timeout",
+          "doc": "Download timeout.\n\n"
+        },
+        {
+          "name": "pluginversion",
+          "doc": "Version of the dependency plugin to use.\n\n"
+        },
+        {
+          "name": "options",
+          "doc": "Other options to pass to mvn.\n\n"
+        },
+        {
+          "name": "user",
+          "doc": "User to run Maven as. Useful to share a local repo and settings.xml. Defaults to root.\n\n"
+        },
+        {
+          "name": "group",
+          "doc": "Group to run Maven as. Defaults to root.\n\n"
+        }
+      ],
+      "providers": [
+        {
+          "name": "mvn",
+          "doc": "Maven download using mvn command line."
+        }
+      ]
+    }
+  ],
+  "checksums": {
+    "Gemfile": "7af3acbbb3a8be369945a46bcb1fc190",
+    "Gemfile.lock": "98dfcaf3eb4cd6f02ea88bdaa84b3c4f",
+    "LICENSE": "3b83ef96387f14655fc854ddc3c6bd57",
+    "Modulefile": "7fafa54223fbf4bfb645014751c18513",
+    "Puppetfile": "ffbfa1dee66bf4bf8db958d36bc710c5",
+    "Puppetfile.lock": "9bd55c56058d4003eb45481648b625f9",
+    "README.md": "b6b7deccbd6856ccfacd105c5940eb64",
+    "Rakefile": "eb3609d9e10aa67e2a60992460b8b66a",
+    "Vagrantfile": "a7ca2302b3450128d36e866d7f3781e0",
+    "lib/facter/maven_version.rb": "b8f07ca896a5da84f4f61a44389a6bc4",
+    "lib/puppet/parser/functions/snapshotbaseversion.rb": "04a9c5225aa266202ca7699d6934f515",
+    "lib/puppet/provider/maven/mvn.rb": "eddd3beb564c9c16e1440a1d4155681a",
+    "lib/puppet/type/maven.rb": "a8523957e4384c452b660b542839cd9e",
+    "manifests/buildr.pp": "2229539426e20cf286e547e4e631e9ef",
+    "manifests/configure.pp": "8c0ab3e2e4349e8b17958aa1d100f598",
+    "manifests/environment.pp": "50e56defef3a123a6629df3547259eb3",
+    "manifests/init.pp": "c2589c4c1dee9f3e510ddda520069b3e",
+    "manifests/install-gem.pp": "f4b2354eafad286eb160b71c6f2c3d38",
+    "manifests/install_gem.pp": "1118a2cee8e85960f84bafcbbf09d354",
+    "manifests/maven.pp": "bfc8a429fafd81c40df8605a8d1fd121",
+    "manifests/settings.pp": "ec5e72854506b05cdff7f675f815b45d",
+    "spec/classes/maven_spec.rb": "7aa7a05027d0b8f00342db730c6ce36d",
+    "spec/defines/complete-settings.xml": "93cd3fb1045c05b1335cc57527837459",
+    "spec/defines/default-mavenrc": "d41d8cd98f00b204e9800998ecf8427e",
+    "spec/defines/default-repo-only-url-settings.xml": "7f6e08fbc6e9bc0b4cf3a70f36fd08b9",
+    "spec/defines/default-repo-settings.xml": "3561cff50da7d88e17076b4051e73a17",
+    "spec/defines/default-settings.xml": "c32126be976d4cce94072d259d60c65d",
+    "spec/defines/environment_spec.rb": "d463392855a42f32743fbb4750abd678",
+    "spec/defines/local-repo-settings.xml": "d5616742cec8e8607218c6b904a30a92",
+    "spec/defines/mirror-servers-settings.xml": "662435f74748748da087b16895c42cc3",
+    "spec/defines/populated-mavenrc": "f3ba57173b64666212ae64fcc2e0c8e3",
+    "spec/defines/properties-settings.xml": "77981a6e51efa1781a7adfb660a5d4d1",
+    "spec/defines/proxy-settings.xml": "58918c96c513e2e5649f42c65c8a29fd",
+    "spec/defines/settings_spec.rb": "621e49c1ae4004e1bee9522b540184b7",
+    "spec/fixtures/modules/wget/Gemfile": "4867df718b033e152c59c2a418e88b92",
+    "spec/fixtures/modules/wget/Gemfile.lock": "b3e4cf700f055d8d242ad877da298127",
+    "spec/fixtures/modules/wget/Modulefile": "319654cea17d4ad7af5a45f4746f6678",
+    "spec/fixtures/modules/wget/README.md": "53e3a8bdf9ad988aae9b9581831bbcd6",
+    "spec/fixtures/modules/wget/Rakefile": "527f8893f2694a9bc92993074f011cc3",
+    "spec/fixtures/modules/wget/manifests/init.pp": "7a1575c5a0a755b01dcdd2dbf4f8e956",
+    "spec/fixtures/modules/wget/spec/classes/init_spec.rb": "337ce66ffc43c7478ff0d3ff166d278a",
+    "spec/fixtures/modules/wget/spec/fixtures/manifests/site.pp": "627dec82fd1b0d0b4f9e47135ed3e1b7",
+    "spec/fixtures/modules/wget/spec/spec_helper.rb": "0db89c9a486df193c0e40095422e19dc",
+    "spec/spec_helper.rb": "cc65187d0436f0481de4f83a41179d37",
+    "spec/spec_helper_system.rb": "de7467d5673b34504b38ab22a34616aa",
+    "spec/system/maven_system_spec.rb": "a0070e37027c70711fee7908597629e1",
+    "spec/unit/puppet/provider/maven/mvn_spec.rb": "1c86764b1736b96ba1cef73c7ad016c0",
+    "spec/unit/puppet/type/maven_spec.rb": "ba9d2fb1f50817a9c36d5dc11be21778",
+    "templates/mavenrc.erb": "319f01bd0b0ec202132d7338230f09a6",
+    "templates/settings.xml.erb": "ad0068b18196bcc816e3fc0e57476150",
+    "tests/init.pp": "5f811b0b07e068c555afb42c34d94928"
+  }
+}
