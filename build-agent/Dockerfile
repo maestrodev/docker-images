@@ -1,5 +1,5 @@
 FROM devopsil/puppet
-#FROM centos:latest
+#FROM centos:centos6
 
 MAINTAINER Carlos Sanchez <carlos@apache.org>
 
