@@ -78,15 +78,22 @@ FORGE
       puppetlabs/firewall (>= 0.0.4)
       puppetlabs/stdlib (< 5.0.0, >= 3.2.0)
     puppetlabs/stdlib (4.2.2)
+    saz/ssh (2.3.6)
+      puppetlabs/stdlib (>= 2.2.1)
+    stahnma/epel (0.1.0)
+
+GIT
+  remote: https://github.com/maestrodev/puppet-jenkins
+  ref: slave-ensure
+  sha: 105ce0f8c9bdf66825c03b85b3e50cd4ff080047
+  specs:
     rtyler/jenkins (1.1.0)
       darin/zypprepo (>= 1.0.1)
       puppetlabs/apt (>= 0.0.3)
       puppetlabs/java (>= 1.0.1)
       puppetlabs/stdlib (>= 2.0.0)
-    saz/ssh (2.3.6)
-      puppetlabs/stdlib (>= 2.2.1)
-    stahnma/epel (0.1.0)
 
 DEPENDENCIES
   maestrodev/maestro_nodes (>= 1.7.0)
+  rtyler/jenkins (>= 0)
 

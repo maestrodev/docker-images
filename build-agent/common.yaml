@@ -20,3 +20,5 @@ maestro_nodes::puppetforge::password: doe
 #jenkins::slave::ui_user: 'jenkins'
 #jenkins::slave::ui_pass: 'jenkins'
 jenkins::slave::install_java: false
+jenkins::slave::ensure: stopped
+jenkins::slave::enable: false
