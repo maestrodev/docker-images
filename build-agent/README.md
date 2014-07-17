@@ -1,6 +1,6 @@
 # Build agent `maestrodev/build-agent`
 
-A preinstalled build agent running Jenkins swarm slave with typical build software, installed using Puppet.
+A preinstalled CentOS build agent running Jenkins swarm slave with typical build software, installed using Puppet.
 
 * Java
 * Ant
