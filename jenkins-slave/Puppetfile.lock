@@ -1,0 +1,24 @@
+FORGE
+  remote: https://forgeapi.puppetlabs.com
+  specs:
+    darin/zypprepo (1.0.1)
+    puppetlabs/apt (1.5.1)
+      puppetlabs/stdlib (>= 2.2.1)
+    puppetlabs/java (1.1.1)
+      puppetlabs/stdlib (>= 0.1.6)
+    puppetlabs/stdlib (4.3.2)
+
+GIT
+  remote: https://github.com/maestrodev/puppet-jenkins
+  ref: slave-ensure
+  sha: fa3e1301a64c7e3ca4703bbbc063c61591de4bb4
+  specs:
+    rtyler/jenkins (1.1.0)
+      darin/zypprepo (>= 1.0.1)
+      puppetlabs/apt (>= 0.0.3)
+      puppetlabs/java (>= 1.0.1)
+      puppetlabs/stdlib (>= 2.0.0)
+
+DEPENDENCIES
+  rtyler/jenkins (>= 0)
+

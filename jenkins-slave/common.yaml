@@ -1,0 +1,6 @@
+# Jenkins slave
+#jenkins::slave::masterurl: 'http://jenkins:8080'
+#jenkins::slave::ui_user: 'jenkins'
+#jenkins::slave::ui_pass: 'jenkins'
+jenkins::slave::ensure: stopped
+jenkins::slave::enable: false

@@ -20,6 +20,17 @@ username: '$PUPPETFORGE_USERNAME'
 password: '$PUPPETFORGE_PASSWORD'
 EOF
 
-# jenkins slave
+# jenkins swarm slave
 JAR=`ls -1 $HOME/swarm-client-*.jar | tail -n 1`
-java -jar $JAR -username $JENKINS_USERNAME -password $JENKINS_PASSWORD -master $JENKINS_MASTER -fsroot $HOME
+
+PARAMS=""
+if [ ! -z "$JENKINS_USERNAME" ]; then
+  PARAMS="$PARAMS -username $JENKINS_USERNAME"
+fi
+if [ ! -z "$JENKINS_PASSWORD" ]; then
+  PARAMS="$PARAMS -password $JENKINS_PASSWORD"
+fi
+if [ ! -z "$JENKINS_MASTER" ]; then
+  PARAMS="$PARAMS -master $JENKINS_MASTER"
+fi
+java -jar $JAR $PARAMS -fsroot $HOME

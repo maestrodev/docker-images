@@ -29,9 +29,9 @@ RUN puppet apply /etc/puppet/manifests/site.pp --verbose --detailed-exitcodes ||
 ADD cmd.sh /cmd.sh
 
 ENV HOME /var/local/maestro-agent
-ENV JENKINS_USERNAME jenkins
-ENV JENKINS_PASSWORD jenkins
-ENV JENKINS_MASTER http://jenkins:8080
+#ENV JENKINS_USERNAME jenkins
+#ENV JENKINS_PASSWORD jenkins
+#ENV JENKINS_MASTER http://jenkins:8080
 
 ENV RUBYGEMS_API_KEY xxxxx
 ENV GEMINABOX https://xxx:yyy@gems.acme.com
