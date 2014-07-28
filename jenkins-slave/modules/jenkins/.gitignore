@@ -1,0 +1,14 @@
+.project
+.blimpy.d
+.vagrant
+pkg/*
+tmp/*
+README.pdf
+/test_reports
+.rvmrc
+.ruby-*
+*.swp
+spec/fixtures
+*.swo
+Gemfile.lock
+
