@@ -1,7 +1,7 @@
 # RVM
 # cruby binaries must exist in https://rvm.io/binaries/centos/6/x86_64/
 rvm::system_rubies:
-  'ruby-1.9.3-p547': {}
+  'ruby-1.9.3-p484': {}
   'ruby-2.0.0-p481':
     default_use: true
   'ruby-2.1.2': {}
