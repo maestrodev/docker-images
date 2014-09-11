@@ -12,9 +12,11 @@ if [ ! -z "$JENKINS_PASSWORD" ]; then
 fi
 if [ ! -z "$JENKINS_MASTER" ]; then
   PARAMS="$PARAMS -master $JENKINS_MASTER"
-else if [ ! -z "$JENKINS_SERVICE_PORT" ]; then
-  # kubernetes environment variable
-  PARAMS="$PARAMS -master http://localhost:$JENKINS_SERVICE_PORT"
+else
+  if [ ! -z "$JENKINS_SERVICE_PORT" ]; then
+    # kubernetes environment variable
+    PARAMS="$PARAMS -master http://localhost:$JENKINS_SERVICE_PORT"
+  fi
 fi
 
 java -jar $JAR $PARAMS -fsroot $HOME
