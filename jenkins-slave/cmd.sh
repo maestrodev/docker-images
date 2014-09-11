@@ -15,7 +15,7 @@ if [ ! -z "$JENKINS_MASTER" ]; then
 else
   if [ ! -z "$JENKINS_SERVICE_PORT" ]; then
     # kubernetes environment variable
-    PARAMS="$PARAMS -master http://localhost:$JENKINS_SERVICE_PORT"
+    PARAMS="$PARAMS -master http://$SERVICE_HOST:$JENKINS_SERVICE_PORT"
   fi
 fi
 
