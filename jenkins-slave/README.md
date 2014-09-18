@@ -1,5 +1,7 @@
 # Jenkins swarm slave `maestrodev/jenkins-slave`
 
+**NOTE New versions at `csanchez/jenkins-swarm-slave`**
+
 A CentOS [Jenkins swarm](https://wiki.jenkins-ci.org/display/JENKINS/Swarm+Plugin) slave, installed using Puppet.
 
 For a container with many build tools installed see `maestrodev/build-agent`
