@@ -1,6 +1,8 @@
-# Jenkins swarm slave `maestrodev/jenkins-slave`
+# Jenkins swarm slave
 
-**NOTE New versions at `csanchez/jenkins-swarm-slave`**
+[`maestrodev/jenkins-slave`](https://registry.hub.docker.com/u/maestrodev/jenkins-slave/)
+
+**NOTE New versions at [`csanchez/jenkins-swarm-slave`](https://registry.hub.docker.com/u/csanchez/jenkins-swarm-slave/)**
 
 A CentOS [Jenkins swarm](https://wiki.jenkins-ci.org/display/JENKINS/Swarm+Plugin) slave, installed using Puppet.
 
