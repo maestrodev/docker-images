@@ -14,6 +14,7 @@ node 'default' {
   class { 'svn': }
   class { 'maestro_nodes::puppetforge': }
   class { 'maestro_nodes::agent::jenkins': }
+  class { 'docker': }
 
   Class['java'] -> Service['jenkins-slave']
 
