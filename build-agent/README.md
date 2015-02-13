@@ -5,7 +5,7 @@ A preinstalled CentOS build agent running Jenkins swarm slave with typical build
 * Java
 * Ant
 * Maven
-* RVM (with 1.9, 2.0, 2.1, JRuby)
+* RVM (with 2.0, 2.1, JRuby)
 * Git
 * Svn
 
